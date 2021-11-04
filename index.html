@@ -1,5 +1,5 @@
-        <div class="wrapper">
-            <form class="form1" action="http://google.com">
+<div class="wrapper">
+            <form method="POST" class="form1" onsubmit="return checkPassword();  return false;">
                 <div class="formtitle">
                     Enter the password to proceed
                 </div>
@@ -15,7 +15,7 @@
                 </div>
 
                 <div class="buttons">
-                    <input class="orangebutton" type="button" value="Login" onclick="checkPassword()" />
+                    <input class="orangebutton" type="submit" value="Login"  />
                 </div>
             </form>
         </div>
@@ -24,7 +24,7 @@
       function checkPassword(){
        if(document.getElementById('password').value == 'hello'){
         alert('Correct Password!'); 
-          location.href = "http://google.com";
+        location.href="http://google.com";
          } else {
          alert('Wrong Password!');
           return false;
